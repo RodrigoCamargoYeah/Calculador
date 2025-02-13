@@ -50,6 +50,10 @@ button:hover {
     background-color: #ccc;
 }
 
+.operador:hover {
+    background-color: #015baa;
+}
+
 .zero {
     flex: 0 0 50%;
 }

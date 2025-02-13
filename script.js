@@ -11,23 +11,37 @@ function calculateExpression(expression) {
         return "Error";
     }
 }
+display.value = "0";
 
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         switch (btn.id) {
             case 'equals':
-                display.value = calculateExpression(display.value);
+                if(display.value === "Error" || display.value === 'Infinty'){
+                    display.value = "0";
+                } else{
+                    display.value = calculateExpression(display.value);
+                }
                 break;
             case 'clear':
-                display.value = "";
+                display.value = "0";
                 break;
             case 'delete':
-                display.value = display.value.slice(0, -1);
+                if (display.value.length === 1 || display.value === "Error" || display.value === "infnity") {
+                    display.value = "0";
+                } else {
+                    display.value = display.value.slice(0, -1);
+                }
+                    
                 break;
             default:
                 if (display.value.length < MAX_DISPLAY_LENGTH) {
+                    if (display.value === "0" || display.value === "Error" || display.value === "infnity") {
+                    display.value = btn.id;
+                } else {
                     display.value += btn.id;
-                }
+                } 
+            } 
         }
     });
 });

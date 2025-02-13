@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: monospace;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+} 
+
+#pantalla {
+    background-color: #222;
+    color: #fff;
+    font-size: 2em;
+    padding: 20px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+#botones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 25%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 20px;
+    font-size: 1.5em;
+    transition: background-color 0.3s;
+    font-family: monospace;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+.zero {
+    flex: 0 0 50%;
+}
+.ac {
+    flex: 0 0 50%;
+}
+
+.operador {
+    background-color: #08f;
+}
+
+.igual {
+    background-color: #08f;
+}

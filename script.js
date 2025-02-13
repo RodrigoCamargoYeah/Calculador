@@ -14,6 +14,8 @@ buttons.forEach(button => {
                 if (display.value === 'Error' || display.value === 'Infinity'){
                     display.value = '0';
                     // alert(button.id);
+                } else if (num1 != null && operator === null) {
+                    display.value = display.value;
                 } else {
                     calcular(Number(num1), Number(num2), operator)
                     display.value = result;
@@ -82,7 +84,11 @@ function calcular(x, y, op) {
             result = x * y;
             break;
         case '/':
-            result = x / y;
+            if (y = '0'){
+                result = 'jeje'
+            } else{
+                result = x / y;
+            }
             break;
     }
 }

@@ -11,7 +11,7 @@ buttons.forEach(button => {
     button.addEventListener('click', () => {
         switch (button.id) {
             case 'equals':
-                if (display.value === 'Error' || display.value === 'Infinity'){
+                if (display.value == '0' && num1 == null || display.value === 'Error' || display.value === 'Infinity'){
                     display.value = '0';
                     // alert(button.id);
                 } else if (num1 != null && operator === null) {

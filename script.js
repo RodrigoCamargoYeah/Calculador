@@ -18,11 +18,15 @@ buttons.forEach(button => {
                     display.value = display.value;
                 } else {
                     calcular(Number(num1), Number(num2), operator)
-                    display.value = result;
-                    num1 = result;
-                    num2 = null;
-                    operator = null;
-                    result = null;
+                    if (result === 'jeje') {
+                        display.value = 'jeje';
+                    } else {    
+                        display.value = result;
+                        num1 = result;
+                        num2 = null;
+                        operator = null;
+                        result = null;
+                    }
                 }
                 break;
             case 'clear':

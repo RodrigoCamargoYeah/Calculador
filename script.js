@@ -6,7 +6,7 @@ const display = document.querySelector('#pantalla');
 const buttons = document.querySelectorAll('button');
 
 
-display.value = '0'
+display.value = '0';
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         switch (button.id) {
@@ -17,7 +17,7 @@ buttons.forEach(button => {
                 } else if (num1 != null && operator === null) {
                     display.value = display.value;
                 } else {
-                    calcular(Number(num1), Number(num2), operator)
+                    calcular(Number(num1), Number(num2), operator);
                     if (result === 'jeje') {
                         display.value = 'jeje';
                     } else {    
@@ -30,7 +30,7 @@ buttons.forEach(button => {
                 }
                 break;
             case 'clear':
-                display.value = '0'
+                display.value = '0';
                 num1 = null;
                 num2 = null;
                 operator = null;
@@ -38,7 +38,7 @@ buttons.forEach(button => {
             break;
             case 'delete':
                 if (display.value.length === 1 || display.value === "Error"){
-                    display.value = '0'
+                    display.value = '0';
                 } else {
                     display.value = display.value.slice(0, -1);
                 }
@@ -62,7 +62,7 @@ buttons.forEach(button => {
                     display.value = button.id;
                     num1 = button.id;
                 } else if (num1 != null && operator === null) {
-                    display.value += button.id
+                    display.value += button.id;
                     num1 += button.id;
                 } else if (operator != null && num2 === null){
                     display.value = button.id;
@@ -89,7 +89,7 @@ function calcular(x, y, op) {
             break;
         case '/':
             if (y = '0'){
-                result = 'jeje'
+                result = 'jeje';
             } else{
                 result = x / y;
             }

@@ -88,7 +88,7 @@ function calcular(x, y, op) {
             result = x * y;
             break;
         case '/':
-            if (y = '0'){
+            if (y === '0'){
                 result = 'jeje';
             } else{
                 result = x / y;
